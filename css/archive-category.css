@@ -1,0 +1,41 @@
+.line-up-items {
+    justify-content: space-between;
+}
+
+.line-up-item {
+    width: 47%;
+    margin-bottom: var(--sp-main-mb-pb);
+}
+
+.line-up-item li {
+    font-size: var(--sp-main-font-size);
+    margin-bottom: 5px;
+}
+
+.line-up-item-name {
+    white-space: nowrap;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: clip; /*Safari用*/
+    -o-text-overflow: clip; /*Opera用*/    
+}
+
+.line-up-item ul li img {
+    width: 100%;
+    max-height: 350px;
+    position: relative;
+}
+
+@media screen and (min-width: 960px) {
+
+    .line-up-item {
+        width: 30%;
+        margin-bottom: var(--pc-main-mb-pb);
+    } 
+
+    .line-up-item li {
+        font-size: var(--pc-main-font-size);
+        margin-bottom: 5px;
+    }
+
+}

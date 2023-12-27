@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>yours~公式オンラインストア~</title>
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">  
+  <link rel="stylesheet" type="text/css" href="./css/common.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/archive-category.css">
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!--  -->  
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-inner d-fl">
+      <ul class="sp-header-functions-btns-wrapper pc-d-none d-fl">
+        <li class="sp-apply-function sp-header-functions-btns">
+            <a href="">
+              <img src="./assets/ui/order-made-ui.svg" alt="オーダーメイドの申し込みボタン">
+            </a>
+        </li>
+        <li class="sp-purchase-function sp-header-functions-btns">
+            <a href="">
+              <img src="./assets/ui/cart-shopping-ui.svg" alt="カートに入れた商品の確認画面へ">
+            </a>
+        </li>
+      </ul>
+      <!--  -->
+
+      <div class="logo-category-wrapper d-fl">
+        <h1 class="logo"><a><img src="./assets/ui/yours_logo.svg" alt="yoursのロゴ"></a></h1>
+        <!-- pc時のカテゴリー検索 -->
+        <div class="pc-category-search-links-wrapper sp-d-none">
+          <ul class="pc-category-search-links d-fl">
+            <li class="pc-category-search-link"><a href="">MENS</a></li>
+            <li class="pc-category-search-link"><a href="">WOMENS</a></li>
+            <li class="pc-category-search-link"><a href="">UNISEX</a></li>
+          </ul>
+        </div>
+        <!--  -->
+      </div>
+      <!--  -->
+
+      <ul class="sp-header-functions-btns-wrapper pc-d-none d-fl">
+        <li class="sp-header-functions-btns sp-header-functions-search-btn" id="header-search-btn" onclick="headerUibtnChange()">
+          <span>
+            <img src="./assets/ui/search-ui.svg" alt="検索バー" id="header-search-btn-ui">
+          </span>
+        </li>
+        <li class="sp-humberger-btn" id="humberger-btn">
+            <span></span>
+            <span class="humberger-btn-text">MENU</span>
+            <span></span>
+        </li>        
+      </ul>
+      <!--  -->
+
+      <div class="pc-header-functions-btns-wrapper sp-d-none">
+        <ul class="pc-header-functions-btns d-fl">
+          <li class="pc-header-functions-btn pc-header-functions-btn-account"><a href="">アカウント</a></li>
+          <li class="pc-header-functions-btn pc-header-functions-btn-apply"><a href="">お申し込み</a></li>
+          <li class="pc-header-functions-btn pc-header-functions-btn-cart"><a href="">カート</a></li>
+          <li class="pc-header-functions-btn pc-header-functions-btn-search d-fl"  id="header-search-btn-pc" onclick="headerUibtnChangePc()"><span>検索</span><img src="./assets/ui/search-ui.svg" id="header-search-btn-ui-pc" alt=""></li>
+          <li class="pc-header-functions-btn  pc-header-functions-btn-site-map"><span>サイトマップ</span></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- header終了 -->
+
+  <!-- ハンバーガーリスト -->
+  <div class="clicked-js-functions-wrapper sp-humberger-lists-wrapper d-none pc-d-none" id="sp-humberger-lists">
+    <div class="clicked-js-functions-inner sp-humberger-lists-inner">
+      <div class="js-functions-contents sp-humberger-lists-account">
+        <h2 class="js-clicked-js-functions-h2"><span>アカウント</span></h2>
+        <div class="sp-humberger-lists-account-btns-wrapper d-fl">
+          <button class="hover-btn-black">
+            <span class="hover-btn-black-inner">
+              <a class="d-fl">
+                <span>新規登録</span>
+                <span><img src="./assets/ui/btn-arrow.svg" alt="arrow"></span>
+              </a>
+            </span>
+          </button>
+          <button class="hover-btn-black">
+            <span class="hover-btn-black-inner">
+              <a class="d-fl">
+                <span>ログイン</span>
+                <span><img src="./assets/ui/btn-arrow.svg" alt="arrow"></span>
+              </a>
+            </span>
+          </button>
+        </div>
+      </div>
+      <!-- .sp-humberger-lists-account(終了) -->
+
+      <div class="js-functions-contents sp-humberger-lists-categories">
+        <h2 class="js-clicked-js-functions-h2"><span>カテゴリー</span></h2>
+
+        <ul class="sp-humberger-lists-ul sp-humberger-lists-categories-search">
+          <li class="sp-humberger-list-li sp-humberger-list-category-search" id="sp-humberger-list-category-search-mens">MENS</li>
+          <li class="sp-humberger-lists-li-inner-links-wrapper d-none" id="sp-humberger-lists-li-inner-links-mens">
+            <ul>
+              <li><a href=""><span>TOPS</span></a></li>
+              <li class="sp-humberger-lists-li-inner-links-wrapper sp-humberger-lists-li-inner-links-categories-wrapper">
+                <ul>
+                  <li><a href="" class="d-fl"><span>New</span><small>- 最新モデル -</small></a></li>
+                  <li><a href="" class="d-fl"><span>Jucket</span><small>- ジャケット -</small></a></li>
+                  <li><a href="" class="d-fl"><span>Knit</span><small>- ニット -</small></a></li>
+                  <li><a href="" class="d-fl"><span>Shirt</span><small>- シャツ -</small></a></li>
+                </ul>
+              </li>
+              <li><a href=""><span>BOTTOMS</span></a></li>
+              <li class="sp-humberger-lists-li-inner-links-wrapper sp-humberger-lists-li-inner-links-categories-wrapper">
+                <ul>
+                  <li><a href="" class="d-fl"><span>New</span><small>- 最新モデル -</small></a></li>
+                </ul>
+              </li>              
+            </ul>
+          </li>
+          <!-- MENS-Categories(終了) -->
+          <li class="sp-humberger-list-li sp-humberger-list-category-search" id="sp-humberger-list-category-search-womens">WOMENS</li>
+          <li class="sp-humberger-lists-li-inner-links-wrapper d-none" id="sp-humberger-lists-li-inner-links-womens">
+            <ul>
+              <li><a href=""><span>TOPS</span></a></li>
+              <div class="sp-humberger-lists-li-inner-links-wrapper sp-humberger-lists-li-inner-links-categories-wrapper">
+                <ul>
+                  <li><a href="" class="d-fl"><span>New</span><small>- 最新モデル -</small></a></li>
+                  <li><a href="" class="d-fl"><span>Jucket</span><small>- ジャケット -</small></a></li>
+                  <li><a href="" class="d-fl"><span>Knit</span><small>- ニット -</small></a></li>
+                  <li><a href="" class="d-fl"><span>Shirt</span><small>- シャツ -</small></a></li>
+                </ul>
+              </div>
+              <li><a href=""><span>BOTTOMS</span></a></li>
+              <li class="sp-humberger-lists-li-inner-links-wrapper sp-humberger-lists-li-inner-links-categories-wrapper">
+                <ul>
+                  <li><a href="" class="d-fl"><span>New</span><small>- 最新モデル -</small></a></li>
+                </ul>
+              </li>                
+            </ul>
+          </li>
+          <!-- WOMENS-Categories(終了) -->
+          <li class="sp-humberger-list-li sp-humberger-list-category-search" id="sp-humberger-list-category-search-unisex">UNISEX</li>
+          <li class="sp-humberger-lists-li-inner-links-wrapper d-none" id="sp-humberger-lists-li-inner-links-unisex">
+            <ul>
+              <li><a href=""><span>TOPS</span></a></li>
+              <li class="sp-humberger-lists-li-inner-links-wrapper sp-humberger-lists-li-inner-links-categories-wrapper">
+                <ul>
+                  <li><a href="" class="d-fl"><span>New</span><small>- 最新モデル -</small></a></li>
+                  <li><a href="" class="d-fl"><span>Jucket</span><small>- ジャケット -</small></a></li>
+                  <li><a href="" class="d-fl"><span>Knit</span><small>- ニット -</small></a></li>
+                  <li><a href="" class="d-fl"><span>Shirt</span><small>- シャツ -</small></a></li>
+                </ul>
+              </li>
+              <li><a href=""><span>BOTTOMS</span></a></li>
+              <li class="sp-humberger-lists-li-inner-links-wrapper sp-humberger-lists-li-inner-links-categories-wrapper">
+                <ul>
+                  <li><a href="" class="d-fl"><span>New</span><small>- 最新モデル -</small></a></li>
+                </ul>
+              </li>                
+            </ul>
+          </li>  
+          <!-- UNISEX-Categories(終了) -->
+        </ul>
+      </div>
+      <!-- .sp-humberger-lists-categories(終了) -->
+
+      <div class="js-functions-contents sp-humberger-lists-site-map">
+        <h2 class="js-clicked-js-functions-h2"><span>サイトマップ</span></h2>
+
+        <ul class="sp-humberger-lists-ul sp-humberger-lists-site-map-links">
+          <li class="sp-humberger-list-li sp-humberger-list-li-site-map d-fl" id="sp-humberger-list-li-site-map-home"><span>HOME</span></li>
+          <li class="sp-humberger-lists-li-inner-links-wrapper d-none" id="sp-humberger-lists-li-inner-links-home">
+            <ul>
+              <li><a href=""><span>TOP</span></a></li>              
+              <li><a href=""><span>ABOUT</span></a></li>
+              <li><a href=""><span>LINE-UP</span></a></li>
+              <li><a href=""><span>REViEW</span></a></li>
+              <li><a href=""><span>NEWS</span></a></li>
+            </ul>
+          </li>
+          <li class="sp-humberger-list-li"><a href="" class="d-fl"><span>APPLY</span></a></li>
+          <li class="sp-humberger-list-li"><a href="" class=" d-fl"><span>REVIEW</span></a></li>
+        </ul>
+      </div>
+      <!-- .sp-humberger-lists-categories(終了) -->    
+      
+      <div class="js-functions-contents sp-humberger-lists-sns-privacy">
+        <ul class="sp-humberger-lists-sns d-fl">
+          <li>
+            <a href=""><img src="./assets/ui/instagram.svg" alt="instagram"></a>
+          </li>
+          <li>
+            <a href=""><img src="./assets/ui/twitter.svg" alt="twitter"></a>
+          </li>
+          <li>
+            <a href=""><img src="./assets/ui/square-facebook.svg" alt="facebook"></a>
+          </li>
+        </ul>
+        <p class="sp-humberger-lists-privacy" id="hum-privacy-modal-modal-btn">プライバシー&ポリシー</p>
+      </div>
+      <!-- .sp-humberger-lists-sns-privacy(終了) -->
+    </div>
+  </div>
+  <!-- ハンバーガーリスト(終了) -->
+
+  <!-- search-form -->
+  <div class="clicked-js-functions-wrapper all-item-search-form-wrapper d-none" id="all-item-search-form">
+
+    <div class="clicked-js-functions-inner all-item-search-word-form-inner">
+      <h2 class="h2 all-item-search-form-h2">全商品から検索</h2>
+      
+      <div class="search-form-wrapper word-search-form">
+        <form action="" method="get">
+          <h3 class="js-clicked-js-functions-h3 all-item-search-form-h3">ワード検索</h3>
+          <div class="js-functions-contents search-form-content-word-search d-fl">
+            <input type="text">
+            <button type="submit" class="word-seach-input-submit hover-search-submit-btn">検索</button>            
+          </div>
+        </form>
+      </div>
+      <!-- end .word-search-form --> 
+
+      <div class="search-form-wrapper situation-search-form">
+        <form action="" method="get">
+          <h3 class="js-clicked-js-functions-h3 all-item-search-form-h3">条件検索</h3>
+
+          <div class="js-functions-contents search-form-contents-situation">
+            <p>性別を選択</p>
+            <ul class="gender-radios">
+              <li class="rdiobox-wrapper d-fl">
+                <input type="radio" checked="checked" name="gender" value="" id="gender-radios-mens" class="d-none">
+                <label for="gender-radios-mens" class="gender-radio d-fl">MENS</label>
+              </li>
+              <li class="rdiobox-wrapper d-fl">
+                <input type="radio" name="gender" value="" id="gender-radios-womens" class="d-none">
+                <label for="gender-radios-womens" class="gender-radio d-fl">WOMENS</label>
+              </li>
+              <li class="rdiobox-wrapper d-fl">
+                <input type="radio" name="gender" value="" id="gender-radios-unisex" class="d-none">
+                <label for="gender-radios-unisex" class="gender-radio d-fl">UNISEX</label>
+              </li>
+            </ul>
+          </div>
+          <!-- end .search-form-wrapper -->
+
+          <div class="js-functions-contents search-form-contents-situation">
+            <p>ジャンル</p>
+            <div class="serect-box-wrapper">
+              <select name="" id="">
+                <option value="">服のジャンルを選択する</option>
+                <option value="">ジャケット</option>
+                <option value="">ニット</option>
+                <option value="">コート</option>
+                <option value="">ボトムス</option>
+              </select>
+            </div>
+          </div>
+          <!-- end .search-form-wrapper -->
+
+          <div class="js-functions-contents search-form-contents-situation">
+            <p>カラー</p>
+            <ul class="color-check-boxs">
+              <li class="check-box-wrapper d-fl">
+                <input type="checkbox" id="check-box-black" class="d-none">
+                <label for="check-box-black" class="color-check-box color-check-box-black d-fl">ブラック系</label>
+              </li>
+              <li class="check-box-wrapper d-fl">
+                <input type="checkbox" id="check-box-white" class="d-none">
+                <label for="check-box-white" class="color-check-box color-check-box-white d-fl">ホワイト系</label>
+              </li>
+              <li class="check-box-wrapper d-fl">
+                <input type="checkbox" id="check-box-purple" class="d-none">
+                <label for="check-box-purple" class="color-check-box  color-check-box-purple d-fl">パープル系</label>
+              </li>
+              <li class="check-box-wrapper d-fl">
+                <input type="checkbox" id="check-box-beige" class="d-none">
+                <label for="check-box-beige" class="color-check-box color-check-box-beige d-fl">ベージュ系</label>
+              </li>
+              <li class="check-box-wrapper d-fl">
+                <input type="checkbox" id="check-box-blue" class="d-none">
+                <label for="check-box-blue" class="color-check-box color-check-box-blue d-fl">ブルー系</labal>
+              </li>                                          
+            </ul>
+          </div>       
+          <!-- end .search-form-wrapper -->
+
+          <div class="js-functions-contents search-form-contents-situation">
+            <p>価格帯</p>
+            <div class="serect-box-wrapper">
+              <select name="" id="">
+                <option value="">金額を選択する</option>
+                <option value="">10,000以下</option>
+                <option value="">10,000 〜 20,000</option>
+                <option value="">20,000 〜 30,000</option>
+                <option value="">30,000 〜 40,000</option>
+                <option value="">40,000 〜 50,000</option>
+                <option value="">50,000以上</option>
+              </select>
+            </div>
+          </div>
+          <!-- end .search-form-wrapper -->          
+
+          <div class="js-functions-contents search-form-contents-situation">
+            <button type="submit" class="hover-search-submit-btn">この条件で検索</button>
+          </div>
+          <!-- end .search-form-wrapper -->     
+        </form>
+        <!-- end form -->
+      </div>
+      <!-- .situation-search-form -->
+    </div>
+    <!-- end .clicked-js-functions-inner -->
+  </div>
+  <!-- end search-form -->
+
+  <!-- main -->
+  <main id="page-contents">
+    <div class="contents-wrapper top" id="top">
+      <div class="swiper aboveswiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide top-swiper-slide"><img src="./assets/top_slider_imgs-assets/top_slider_above_img_01.jpg" alt="スライド画像"></li>
+          <li class="swiper-slide top-swiper-slide"><img src="./assets/top_slider_imgs-assets/top_slider_above_img_02.jpg" alt="スライド画像"></li>
+          <li class="swiper-slide top-swiper-slide"><img src="./assets/top_slider_imgs-assets/top_slider_above_img_03.jpg" alt="スライド画像"></li>
+          <li class="swiper-slide top-swiper-slide"><img src="./assets/top_slider_imgs-assets/top_slider_above_img_04.jpg" alt="スライド画像"></li>
+        </ul>
+      </div>
+      <!-- end .aboveswiper -->
+      <p class="top-animation-catch-flase top-animation-catch-flase-above"><img src="./assets/top_slider_imgs-assets/catch_flase_01.png" alt="キャッチフレーズ"></p>
+
+      <div class="swiper downswiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide top-swiper-slide"><img src="./assets/top_slider_imgs-assets/top_slider_down_img_01.jpg" alt="スライド画像"></li>
+          <li class="swiper-slide top-swiper-slide"><img src="./assets/top_slider_imgs-assets/top_slider_down_img_02.jpg" alt="スライド画像"></li>
+          <li class="swiper-slide top-swiper-slide"><img src="./assets/top_slider_imgs-assets/top_slider_down_img_03.jpg" alt="スライド画像"></li>
+          <li class="swiper-slide top-swiper-slide"><img src="./assets/top_slider_imgs-assets/top_slider_down_img_04.jpg" alt="スライド画像"></li>
+        </ul>
+      </div> 
+      <!-- end .downswiper -->   
+      <p class="top-animation-catch-flase top-animation-catch-flase-down"><img src="./assets/top_slider_imgs-assets/catch_flase_02.png" alt="キャッチフレーズ"></p>  
+
+    </div>
+    <!-- end .contents-wrapper -->
+  
+    <div class="contents-wrapper contents-block contents-block-white about" id="about">
+      
+      <div class="contents-block-inner inner contents-block-inner-about">
+        <div class="about-contnt-wrapper">
+          <h2>ABOUT</h2>
+
+          <!-- sp-creaters-boxs-wrapper -->
+          <div class="about-contents-img-box-wrapper-sp pc-d-none">
+            <ul class="d-fl">
+              <li><img src="./assets/about-img/about-img-01.jpg" alt=""></li>
+              <li><img src="./assets/about-img/about-img-02.jpg" alt=""></li>
+            </ul>
+          </div>
+
+          <div class="d-fl pc-about-flex-box">
+            <div class="text-boxs-wrapper about-text-box">
+              <h3>~MESSAGEMESSAGEMESSAGE~</h3>
+              <p>TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+              </p>
+              <button class="hover-btn hover-btn-black about-hover-btn">
+                <span class="hover-btn-black-inner">
+                  <a href="" class="d-fl">
+                    <span>全商品を見る</span>
+                    <span><img src="./assets/ui/btn-arrow.svg" alt="arrow"></span>
+                  </a>
+                </span>
+              </button>
+            </div>
+            <!-- end text-boxs-wrapper -->
+            <div class="about-contents-img-box-wrapper-pc sp-d-none">
+              <ul class="d-fl">
+                <li><img src="./assets/about-img/about-img-01.jpg" alt=""></li>
+                <li><img src="./assets/about-img/about-img-02.jpg" alt=""></li>
+              </ul>   
+            </div>
+            <!-- end pc-creaters-boxs-wrapper -->
+          </div>
+        </div>
+        <!-- end about-text-contnt-wrapper -->
+
+      </div>
+      <!-- end inner -->
+    </div>
+    <!-- end .contents-wrapper -->
+
+    <div class="contents-wrapper contents-block contents-block-gray line-up" id="line-up">
+      <h2>LINE-UP</h2>
+      <div class="top-line-up-content">
+        <ul class="top-line-up-gender-tabs d-fl">
+          <li class="top-line-up-gender-tab-btn tab_is_active">MENS</li>
+          <li class="top-line-up-gender-tab-btn">WOMENS</li>
+          <li class="top-line-up-gender-tab-btn">UNISEX</li>
+        </ul>
+        <!-- end top-line-up-gender-tabs -->
+
+        <div class="top-line-up-gender-wrpper top-line-up-gender-tab-content d-none tab_show" id="top-line-up-mens">
+          <h3>New</h3>
+          <div class="top-line-up-gender-items-inner top-line-up-gender-new-items line-up-items inner d-fl">
+
+            <div class="top-line-up-gender-item line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img"><img src="./assets/items/mens/denim_tereard_01.jpg" alt="商品画像"></li>
+                  <li class="line-up-item-name">デニムテーラードジャケット</li>
+                  <li class="line-up-item-price">¥22,000</li>
+                </ul>
+              </a>
+            </div>
+
+            <div class="top-line-up-gender-item line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img"><img src="./assets/items/mens/kyuba_knite_red_bejyu_01.jpg" alt="商品画像"></li>
+                  <li class="line-up-item-name">キューバーサマーニット</li>
+                  <li class="line-up-item-price">¥22,000</li>
+                </ul>
+              </a>
+            </div>
+
+            <div class="top-line-up-gender-item line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img"><img src="./assets/items/mens/kyuba_knite_purpre_01.jpg" alt="商品画像"></li>
+                  <li class="line-up-item-name">キューバーサマーニット</li>
+                  <li class="line-up-item-price">¥22,000</li>
+                </ul>
+              </a>
+            </div>
+
+          </div>
+          <!-- end inner -->
+
+          <h3>Category</h3>
+          <div class="top-line-up-gender-items-inner top-line-up-gender-categories inner line-up-items d-fl">
+
+            <div class="top-line-up-category line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img top-line-up-category-img"><img src="./assets/items/mens/denim_tereard_01.jpg" alt="カテゴリーの写真"></li>
+                  <li class="top-line-up-category-name">ジャケット</li>
+                </ul>
+              </a>
+            </div>
+
+            <div class="top-line-up-category line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img top-line-up-category-img"><img src="./assets/items/mens/kyuba_knite_red_bejyu_01.jpg" alt="カテゴリーの写真"></li>
+                  <li class="top-line-up-category-name">ニット</li>
+                </ul>
+              </a>
+            </div>  
+            
+            <div class="top-line-up-category line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img top-line-up-category-img"><img src="./assets/items/mens/denim_shirts_01.jpg" alt="カテゴリーの写真"></li>
+                  <li class="top-line-up-category-name">シャツ</li>
+                </ul>
+              </a>
+            </div>  
+
+            <div class="top-line-up-category line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img top-line-up-category-img"><img src="./assets/items/mens/two_way_caught_01.jpg" alt="カテゴリーの写真"></li>
+                  <li class="top-line-up-category-name">コート</li>
+                </ul>
+              </a>
+            </div>  
+
+          </div>
+          <!-- end inner -->
+
+        </div>
+        <!-- end top-line-up-gender-wrpper(mens) -->
+
+        <div class="top-line-up-gender-wrpper top-line-up-gender-tab-content d-none" id="top-line-up-womens">
+          <h3>New</h3>
+          <div class="top-line-up-gender-items-inner top-line-up-gender-categories inner line-up-items d-fl">
+
+            <div class="top-line-up-gender-item line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img"><img src="./assets/items/womens/jyachet-01.jpg" alt="商品画像"></li>
+                  <li class="line-up-item-name">カジュアルジャケット</li>
+                  <li class="line-up-item-price">¥22,000</li>
+                </ul>
+              </a>
+            </div>
+
+            <div class="top-line-up-gender-item line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img"><img src="./assets/items/womens/caught.jpg" alt="商品画像"></li>
+                  <li class="line-up-item-name">レディースコート</li>
+                  <li class="line-up-item-price">¥22,000</li>
+                </ul>
+              </a>
+            </div>            
+
+            <div class="top-line-up-gender-item line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img"><img src="./assets/items/womens/knite-01.jpg" alt="商品画像"></li>
+                  <li class="line-up-item-name">レディースニット</li>
+                  <li class="line-up-item-price">¥22,000</li>
+                </ul>
+              </a>
+            </div>
+
+          </div>
+
+          <h3>Category</h3>
+          <div class="top-line-up-gender-items-inner top-line-up-gender-categories inner line-up-items d-fl">
+
+            <div class="top-line-up-category line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img top-line-up-category-img"><img src="./assets/items/womens/jyachet-01.jpg" alt="カテゴリーの写真"></li>
+                  <li class="top-line-up-category-name">ジャケット</li>
+                </ul>
+              </a>
+            </div>
+
+            <div class="top-line-up-category line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img top-line-up-category-img"><img src="./assets/items/womens/knite-01.jpg" alt="カテゴリーの写真"></li>
+                  <li class="top-line-up-category-name">ニット</li>
+                </ul>
+              </a>
+            </div>
+
+            <div class="top-line-up-category line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img top-line-up-category-img"><img src="./assets/items/womens/shirts-01.jpg" alt="カテゴリーの写真"></li>
+                  <li class="top-line-up-category-name">シャツ</li>
+                </ul>
+              </a>
+            </div> 
+            
+            <div class="top-line-up-category line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img top-line-up-category-img"><img src="./assets/items/womens/caught.jpg" alt="カテゴリーの写真"></li>
+                  <li class="top-line-up-category-name">コート</li>
+                </ul>
+              </a>
+            </div> 
+                                           
+          </div>          
+
+        </div>
+        <!-- end top-line-up-gender-wrpper(womens) -->
+
+        <div class="top-line-up-gender-wrpper top-line-up-gender-tab-content d-none" id="top-line-up-unisex">
+          <h3>New</h3>
+          <div class="top-line-up-gender-items-inner top-line-up-gender-categories inner line-up-items d-fl">
+
+            <div class="top-line-up-gender-item line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img"><img src="./assets/items/unisex/u-jyachet.jpg" alt="商品画像"></li>
+                  <li class="line-up-item-name">デニムジャケット</li>
+                  <li class="line-up-item-price">¥22,000</li>
+                </ul>
+              </a>
+            </div>  
+            <!--  -->
+            
+            <div class="top-line-up-gender-item line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img"><img src="./assets/items/unisex/u-caught-01.jpg" alt="商品画像"></li>
+                  <li class="line-up-item-name">Wコート</li>
+                  <li class="line-up-item-price">¥22,000</li>
+                </ul>
+              </a>
+            </div>  
+            <!--  -->
+
+            <div class="top-line-up-gender-item line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img"><img src="./assets/items/unisex/u-knite-01.jpg" alt="商品画像"></li>
+                  <li class="line-up-item-name">デニムジャケット</li>
+                  <li class="line-up-item-price">¥22,000</li>
+                </ul>
+              </a>
+            </div> 
+
+          </div>
+
+          <h3>Category</h3>
+          <div class="top-line-up-gender-items-inner top-line-up-gender-categories inner line-up-items d-fl">
+
+            <div class="top-line-up-category line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img top-line-up-category-img"><img src="./assets/items/unisex/u-jyachet.jpg" alt="カテゴリーの写真"></li>
+                  <li class="top-line-up-category-name">ジャケット</li>
+                </ul>
+              </a>
+            </div>
+
+            <div class="top-line-up-category line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img top-line-up-category-img"><img src="./assets/items/unisex/u-knite-01.jpg" alt="カテゴリーの写真"></li>
+                  <li class="top-line-up-category-name">ニット</li>
+                </ul>
+              </a>
+            </div>
+
+            <div class="top-line-up-category line-up-item">
+              <a>
+                <ul>
+                  <li class="line-up-item-img top-line-up-category-img"><img src="./assets/items/unisex/u-caught-01.jpg" alt="カテゴリーの写真"></li>
+                  <li class="top-line-up-category-name">コート</li>
+                </ul>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <!-- end top-line-up-gender-wrpper(unisex) -->
+      </div>
+
+      <div class="inner line-up-btn-wrapper">
+        <button class="hover-btn hover-btn-black line-up-hover-btn">
+          <span class="hover-btn-black-inner">
+            <a href="" class="d-fl">
+              <span>全商品を見る</span>
+              <span><img src="./assets/ui/btn-arrow.svg" alt="arrow"></span>
+            </a>
+          </span>
+        </button>
+      </div>
+
+    </div>
+    <!-- end .contents-wrapper -->
+
+    <div class="contents-wrapper contents-block contents-block-white review" id="review">
+      <div class="inner review-inner">
+        <h2>REVIEW</h2>
+        <div class="top-review-contents d-fl">
+
+          <div class="top-review-content d-fl">
+            <p class="intervewer-img sp-d-none">
+              <a href=""><img src="./assets/review/S_K.jpg" alt="インタビュアーの画像"></a>
+            </p>
+            <!-- end .pc-intervewer-img -->
+            <ul>
+              <li class="intervewer-img pc-d-none">
+                <a href=""><img src="./assets/review/S_K.jpg" alt="インタビュアーの画像"></a>
+              </li>
+              <li class="intervewer-bought-item">Two-Way コート</li>
+              <li class="intervewer-info d-fl">
+                <small>2023.04.04</small>
+                <span  class="intervewer-name-initial">S.K<small>さん</small></span>
+              </li>
+              <li></li>
+              <li class="reveiw-more-link">
+                <a class="d-fl">
+                  <span>レビューを見る</span>
+                  <span><img src="./assets/ui/btn-arrow-white.svg" alt="arrow"></span>
+                </a>
+              </li>
+              <li class="sp-d-none text-boxs-wrapper">
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+              </li>
+            </ul>
+          </div>
+          <!--  -->
+
+          <div class="top-review-content d-fl">
+            <p class="intervewer-img sp-d-none">
+              <a href=""><img src="./assets/review/S_I.jpg" alt="インタビュアーの画像"></a>
+            </p>
+            <!-- end .pc-intervewer-img -->
+            <ul>
+              <li class="intervewer-img pc-d-none">
+                <a href=""><img src="./assets/review/S_I.jpg" alt="インタビュアーの画像"></a>
+              </li>
+              <li class="intervewer-bought-item text-boxs-wrapper">ステージ衣装</li>
+              <li class="intervewer-info d-fl">
+                <small>2023.04.04</small>
+                <span  class="intervewer-name-initial">S.I<small>さん</small></span>
+              </li>
+              <li class="reveiw-more-link">
+                <a class="d-fl">
+                  <span>レビューを見る</span>
+                  <span><img src="./assets/ui/btn-arrow-white.svg" alt="arrow"></span>
+                </a>
+              </li>
+              <li class="sp-d-none text-boxs-wrapper">
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+              </li>
+            </ul>
+          </div>
+          <!--  -->
+
+          <div class="top-review-content d-fl">
+            <p class="intervewer-img sp-d-none">
+              <a href=""><img src="./assets/review/Y_M.jpg" alt="インタビュアーの画像"></a>
+            </p>
+            <!-- end .pc-intervewer-img -->
+            <ul>
+              <li class="intervewer-img pc-d-none">
+                <a href=""><img src="./assets/review/Y_M.jpg" alt="インタビュアーの画像"></a>
+              </li>
+              <li class="intervewer-bought-item text-boxs-wrapper">デニムシャツ</li>
+              <li class="intervewer-info d-fl">
+                <small>2023.04.04</small>
+                <span  class="intervewer-name-initial">Y.M<small>さん</small></span>
+              </li>
+              <li></li>
+              <li class="reveiw-more-link">
+                <a class="d-fl">
+                  <span>レビューを見る</span>
+                  <span><img src="./assets/ui/btn-arrow-white.svg" alt="arrow"></span>
+                </a>
+              </li>
+              <li class="sp-d-none text-boxs-wrapper">
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+              </li>
+            </ul>
+          </div>
+          <!--  -->
+
+          <div class="top-review-content d-fl">
+            <p class="intervewer-img sp-d-none">
+              <a href=""><img src="./assets/review/K_H.jpg" alt="インタビュアーの画像"></a>
+            </p>
+            <!-- end .pc-intervewer-img -->
+            <ul>
+              <li class="intervewer-img pc-d-none">
+                <a href=""><img src="./assets/review/K_H.jpg" alt="インタビュアーの画像"></a>
+              </li>
+              <li class="intervewer-bought-item text-boxs-wrapper">ステージ衣装</li>
+              <li class="intervewer-info d-fl">
+                <small>2023.04.04</small>
+                <span  class="intervewer-name-initial">H.K<small>さん</small></span>
+              </li>
+              <li></li>
+              <li class="reveiw-more-link">
+                <a class="d-fl">
+                  <span>レビューを見る</span>
+                  <span><img src="./assets/ui/btn-arrow-white.svg" alt="arrow"></span>
+                </a>
+              </li>
+              <li class="sp-d-none text-boxs-wrapper">
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+                TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT
+              </li>
+            </ul>
+          </div>
+          <!--  -->
+
+        </div>
+        <!--  -->
+      </div>
+    </div>
+    <!-- end .contents-wrapper -->
+
+    <div class="contents-wrapper contents-block contents-block-gray news" id="news">
+      <h2>NEWS</h2>
+      <div class="inner news-inner">  
+        <div class="news-contents-wrapper" id="news-contents">
+
+          <div class="news-content">
+            <p class="news-date">2023.07.01</p>
+            <div class="news-content-inner-box d-fl">
+              <p><img src="./assets/news/news-img-box-01.png" alt=""></p>
+              <ul>
+                <li>デニムシャツ発売開始</li>
+                <li><a href="">>商品ページを見る<</a></li>
+              </ul>
+              <!-- end ul -->
+            </div>
+          </div>
+          <!-- end news-content -->
+
+          <div class="news-content">
+            <p class="news-date">2023.07.01</p>
+            <div class="news-content-inner-box d-fl">
+              <p><img src="./assets/news/news-img-box-02.png" alt=""></p>
+              <ul>
+                <li>キューバサマーニット（パープル）発売開始</li>
+                <li><a href="">>商品ページを見る</a></li>
+              </ul>
+              <!-- end ul -->
+            </div>
+          </div>
+          <!-- end news-content -->      
+
+          <div class="news-content">
+            <p class="news-date">2023.07.01</p>
+            <div class="news-content-inner-box d-fl">
+              <p><img src="./assets/news/news-img-box-03.png" alt=""></p>
+              <ul>
+                <li>キューバサマーニット（ベージュ）発売開始</li>
+                <li><a href="">>商品ページを見る</a></li>
+              </ul>
+              <!-- end ul -->
+            </div>
+          </div>
+          <!-- end news-content -->      
+
+          <div class="news-content">
+            <p class="news-date">2023.07.01</p>
+            <div class="news-content-inner-box d-fl">
+              <p><img src="./assets/news/news-img-box-04.png" alt=""></p>
+              <ul>
+                <li>yours オープン</li>
+                <li><a href=""></a></li>
+              </ul>
+              <!-- end ul -->
+            </div>
+          </div>
+          <!-- end news-content -->      
+
+        </div>
+        <!-- end news-contents-wrapper  -->     
+      </div>
+      <!-- inner -->
+    </div>
+    <!-- end .contents-wrapper -->
+
+  </main>
+  <!-- main(終了) -->
+
+
+  <!-- footer -->
+  <footer>
+    <div class="inner footer-inner">
+      <div class="footer-contents d-fl">
+        <h1 class="logo"><a><img src="./assets/ui/yours_logo.svg" alt="yoursのロゴ"></a></h1>
+        <div class="footer-blocks">
+          <div class="footer-block footer-account">
+            <h3>アカウント</h3>
+            <ul class="footer-btns-wrapper footer-account-btns-wrapper">
+              <li><a href="">新規登録</a></li>
+              <li><a href="">ログイン</a></li>
+            </ul>
+          </div>
+          <!-- end .footer-account -->
+
+          <div class="footer-block footer-site-map">
+            <h3>サイトマップ</h3>
+            <ul class="footer-btns-wrapper footer-site-map-btns-wrapper">
+              <li id="footer-sp-sitemap-accordion" class="footer-accordin-triger">HOME</li>
+              <ul class="footer-sp-accordin-links" id="footer-sp-sitemap-accordion-contents">
+                <li><a href=""><span>TOP</span></a></li>
+                <li><a href=""><span>ABOUT</span></a></li>
+                <li><a href=""><span>LINE-UP</span></a></li>
+                <li><a href=""><span>REVIEW</span></a></li>
+                <li><a href=""><span>NEWS</span></a></li>
+              </ul>
+              <li><a href="">APPLY</a></li>
+              <li><a href="">REVIEW</a></li>
+            </ul>            
+          </div>
+          <!-- end .footer-site-map -->
+
+          <div class="footer-block footer-sns">
+            <h3>SNS</h3>
+            <ul class="footer-btns-wrapper footer-sns-btns-wrapper d-fl">
+              <li><a href=""><img src="./assets/ui/instagram.svg" alt="インスタ"></a></li>
+              <li><a href=""><img src="./assets/ui/twitter.svg" alt="ツイッター"></a></li>
+              <li><a href=""><img src="./assets/ui/square-facebook.svg" alt="フェイスブック"></a></li>
+            </ul>
+          </div>
+
+          <div class="footer-block footer-privacies">
+            <ul class="footer-btns-wrapper">
+              <li id="privacy-modal-modal-btn">プライバシーポリシー</li>
+              <li id="treading-modal-btn">特定商取引法に基づく表示</li>
+            </ul>
+          </div>
+          <!-- end .footer-block -->
+
+        </div>
+        <!-- end .footer-blocks -->
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-functions-wrapper" id="privacy-modal">
+    <div class="clicked-js-functions-inner modal-functions-inner">
+      <button class="modal-close-btn" id="privacy-modal-close-btn"></button>
+      <h2 class="modal-h2 js-clicked-js-functions-h2">プライバシーポリシー</h2>
+      <div class="js-functions-contents modal-contents">
+        <h3 class="js-clicked-js-functions-h3">個人情報保護方針</h3>
+        <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttext
+        </p>
+      </div>
+      <!-- end modal-contents -->
+
+      <div class="js-functions-contents modal-contents">
+        <h3 class="js-clicked-js-functions-h3">個人情報保護方針</h3>
+        <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttext
+        </p>
+      </div>
+      <!-- end modal-contents -->
+
+      <div class="js-functions-contents modal-contents">
+        <h3 class="js-clicked-js-functions-h3">個人情報保護方針</h3>
+        <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttext
+        </p>
+      </div>
+      <!-- end modal-contents -->    
+      
+      <div class="js-functions-contents modal-contents">
+        <h3 class="js-clicked-js-functions-h3">個人情報保護方針</h3>
+        <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttext
+        </p>
+      </div>
+      <!-- end modal-contents -->          
+    </div>
+  </div>
+
+  <div class="modal-functions-wrapper" id="treading-modal">
+    <div class="clicked-js-functions-inner modal-functions-inner">
+      <button class="modal-close-btn" id="treading-modal-close-btn"></button>
+      <h2 class="modal-h2 js-clicked-js-functions-h2">特定商取引法に基づく表示</h2>
+      <div class="js-functions-contents modal-contents">
+        <h3 class="js-clicked-js-functions-h3">1.TEXT</h3>
+        <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttext
+        </p>
+      </div>
+      <!-- end modal-contents -->
+
+      <div class="js-functions-contents modal-contents">
+        <h3 class="js-clicked-js-functions-h3">2.TEXT</h3>
+        <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttext
+        </p>
+      </div>
+      <!-- end modal-contents -->
+
+      <div class="js-functions-contents modal-contents">
+        <h3 class="js-clicked-js-functions-h3">3.TEXR</h3>
+        <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttext
+        </p>
+      </div>
+      <!-- end modal-contents -->    
+      
+      <div class="js-functions-contents modal-contents">
+        <h3 class="js-clicked-js-functions-h3">4>TEXT</h3>
+        <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+          texttexttexttexttexttexttexttexttexttexttexttexttexttext
+        </p>
+      </div>
+      <!-- end modal-contents -->          
+    </div>
+  </div>
+  <!-- js -->
+  <script src="./js/common.js"></script>
+  <script src="./js/tab.js"></script>
+  <script src="./js/scroll.js"></script>
+  <script src="./js/swiper.min.js"></script>  
+  <script src="./js/slide.js"></script>
+</body>
+</html>
